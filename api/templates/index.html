@@ -83,7 +83,7 @@
 
       <div class="row mx-0">
 
-          <div class="col-12 col-md-6 col-lg-4">
+          <div class="logoss col-12 col-md-6 col-lg-4">
               <div class="card border-0 mx-auto btn" data-bs-toggle="modal" data-bs-target="#modal-1"
                   style="width: 18rem;">
                   <img src="../static/assets/logotechempire.png" class="card-img-top" alt="Logote.">
@@ -93,7 +93,7 @@
               </div>
           </div>
 
-          <div class="col-12 col-md-6 col-lg-4">
+          <div class="logoss col-12 col-md-6 col-lg-4">
               <div class="card border-0 mx-auto btn" data-bs-toggle="modal" data-bs-target="#modal-2"
                   style="width: 18rem;">
                   <img src="../static/assets/logocodeina.png" class="card-img-top" alt="logocodeina">
@@ -103,7 +103,7 @@
               </div>
           </div>
 
-          <div class="col-12 col-md-6 col-lg-4">
+          <div class="logoss col-12 col-md-6 col-lg-4">
               <div class="card border-0 mx-auto btn" data-bs-toggle="modal" data-bs-target="#modal-3" style="width: 18rem;">
                   <img src="../static/assets/logobananascript.png" class="card-img-top" alt="logobs">
                   <div class="card-body">
@@ -112,7 +112,7 @@
               </div>
           </div>
 
-          <div class="col-12 col-md-6 col-lg-4">
+          <div class="logoss col-12 col-md-6 col-lg-4">
               <div class="card border-0 mx-auto btn" data-bs-toggle="modal" data-bs-target="#modal-4" style="width: 18rem;">
                   <img src="../static/assets/logoserenatto.png" class="card-img-top" alt="logo serenatto">
                   <div class="card-body">
@@ -200,8 +200,10 @@
         </div>
         <div class="modal-body">
           <img src="../static/assets/gifbcu.gif" class="w-100">
+          <h4>Sobre o projeto:</h4>
           <p>A partir do desafio acadêmico proposto pelo cliente interno, o projeto consiste em um sistema de gestão de chamadas de serviço, que consiste em um sistema com três frentes: O usuário comum que consulta a central de problemas ou realiza a solicitação de suporte técnico para a solução do possível problema. O suporte que atende os usuários resolvendo os seus problemas e computa o problema relatado pelo usuário, podendo assim ser consultado no futuro. O administrador é responsável por gerenciar e cadastrar os usuário e equipamentos.</p>
-          <p>Tecnologias utilizadas para desenvolvimento: Javascript, Typescript, React, Html e Css, e MySql.</p>
+          <h4>Tecnologias utilizadas para desenvolvimento:</h4>
+          <p>Javascript, Typescript, React, Html e Css, e MySql.</p>
           <a class="btn" href="https://github.com/BananaaScript/BetterCallUs">Para mais detalhes acesse o github do projeto: https://github.com/BananaaScript/BetterCallUs</a>
         </div>
         <div class="modal-footer">
@@ -220,9 +222,22 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <h2 class="fw-bold corpersonalizada">Em desenvolvimento</h2>
+          <img src="../static/assets/gifbananascript.gif" class="w-100">
+          <h4>Sobre o projeto:</h4>
           <p>Este projeto tem como objetivo desenvolver um sistema gerenciador de ativos (SGA) para a empresa Youtan, proporcionando à uma empresa uma plataforma eficaz de gerenciamento de ativos, com funcionalidades intuitivas, o SGA simplifica o processo de gerenciamento dos ativos, garantindo uma administração eficiente. </p>
-          <p>Tecnologias utilizadas para desenvolvimento: Java, Javascript, Node Js,  Typescript, React, Spring, Html e Css, e MySql.</p>
+          <h4>Tecnologias utilizadas para desenvolvimento:</h4>
+          <p>Java, Javascript, Node Js,  Typescript, React, Spring, Html e Css, e MySql.</p>
+          <h4>Contribuições pessoais:</h4>
+          <p>A maior parte das minha contribuições para o projeto foram na área de frontend, design das telas de login, cadastro, edição e relatório. Também fiz algumas tabelas com filtro e gráficos.</p>
+          <h4>Hard skills:</h4>
+          <p>-Css e html em geral. Sei fazer com autonomia.</p>
+          <p>-Design de tabelas em css. Sei fazer com autonomia.</p>
+          <p>-Criação de gráficos. Sei fazer com ajuda.</p>
+          <p>-Desenvolver um sistema em Typescript(SGA) utilizando componentes. Sei fazer com ajuda.</p>
+          <h4>Soft skills:</h4>
+          <p>-Organização e gestão de tempo: A organização da equipe foi essencial para que não hája nenhum desespero e pressão nos finais das sprints. Em nenhum momento do projeto a equipe ficou com muitas tarefas que não que não tinha tempo para completa-las até o prazo estipulado.</p>
+          <p>-Comunicação: Muito importante para saber como está sendo o desenvolvimento do projeto, se tem alguém com dificuldade, em quanto tempo a task estará feita.</p>
+          <p>-Comprometimento: O projeto teve muito comprometimento dos membros da equipe, raramente algum membro ficou ocioso esperando a realização de alguma task para começar a trabalhar.</p>
           <a class="btn" href="https://github.com/BananaaScript/SGA">Para mais detalhes acesse o github do projeto: https://github.com/BananaaScript/SGA</a>
         </div>
         <div class="modal-footer">
@@ -255,10 +270,9 @@
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
 <script>
-    // Verifica se o usuário já tem uma preferência de tema armazenada
     const currentTheme = localStorage.getItem('theme');
 
-    // Se não houver preferência, verifica se o navegador está no modo escuro
+
     if (!currentTheme) {
         const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
         if (prefersDarkScheme.matches) {

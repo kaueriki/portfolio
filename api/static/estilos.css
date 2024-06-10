@@ -75,12 +75,6 @@ input[type="checkbox"]:focus {
   height: 700px;
 }
 
-/* .containersobre {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}*/
-
 .imagem-centralizada {
   width: 350px; 
   height: 300px; 
@@ -150,4 +144,12 @@ footer{
 }
 .corpersonalizada {
   color: red;
+}
+
+.modalbody {
+  width: 800px;
+}
+
+.card-img-top:hover {
+  background-color: #a1a1a1;
 }
