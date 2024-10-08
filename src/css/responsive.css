@@ -332,8 +332,9 @@
     }
 
     .about-img img {
-        width: 80vw;
-        margin-top: -280px;
+        width: 60%;
+        height: 50%;
+        margin-top: -200px;
     }
 
     .services h2,
@@ -363,6 +364,7 @@
         font-size: 14px;
         top: 20px;
     } 
+    
     
 }
 
@@ -438,6 +440,11 @@
     
     .portfolio .portfolio-container {
         grid-template-columns: 1fr;
+    }
+
+    .profession-box img {
+        height: 100%;
+        width: 100%;
     }
 
 }
