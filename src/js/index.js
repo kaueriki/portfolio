@@ -40,6 +40,7 @@ window.addEventListener('scroll', () => {
 const darkModeIcon = document.querySelector('#darkMode-icon');
 const logo = document.getElementById('logo');
 const logote = document.getElementById('logote');
+const logobs = document.getElementById('logobs')
 
 darkModeIcon.addEventListener('click', () => {
     const isSun = darkModeIcon.classList.contains('bx-sun');
@@ -48,6 +49,7 @@ darkModeIcon.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
     updateLogo(isSun);
     updateLogote(isSun);
+    updateLogoBS(isSun);
 });
 
 // Função para atualizar a logo
@@ -64,6 +66,14 @@ function updateLogote(isSun) {
         logote.style.backgroundImage = "url('../src/image/logotechempiremodoclaro.png')"; // Modo Claro
     } else {
         logote.style.backgroundImage = "url('../src/image/logotechempire.png')"; // Modo Escuro
+    }
+}
+
+function updateLogoBS(isSun) {
+    if (isSun) {
+        logobs.style.backgroundImage = "url('../src/image/logobananascript-claro.png')"; // Modo Escuro
+    } else {
+        logobs.style.backgroundImage = "url('../src/image/logobananascript.png')"; // Modo Claro
     }
 }
 

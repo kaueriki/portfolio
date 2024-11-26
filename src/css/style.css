@@ -424,9 +424,14 @@ section {
     height: 300px;
 }
 
+
 .portfolio-box img {
     transition: .5s ease;
     height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
 
 .portfolio-box:hover img {
