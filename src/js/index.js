@@ -95,6 +95,11 @@ const modalContent = document.querySelector(".modal-content");
 const closeModalBtn = document.getElementById("closeModalBtn");
 const portfolioBoxes = document.querySelectorAll(".portfolio-box");
 
+// Garantir que o modal esteja inicialmente fechado
+window.onload = function() {
+    modal.style.display = "none"; // O modal começa fechado quando a página é carregada
+};
+
 // Quando qualquer box do portfólio for clicado, abrir o modal
 portfolioBoxes.forEach(box => {
     box.addEventListener("click", function() {
@@ -102,7 +107,7 @@ portfolioBoxes.forEach(box => {
         const title = box.getAttribute("data-title");
         const description = box.getAttribute("data-description");
 
-        // Atualiza o conteúdo do modal
+        // Atualiza o conteúdo do modal com as informações do projeto
         modalContent.innerHTML = `
             <span id="closeModalBtn" class="close-btn">&times;</span>
             <h2>${title}</h2>
@@ -123,7 +128,7 @@ function closeModal() {
     modal.style.display = "none";
 }
 
-// Quando o usuário clicar fora do modal, fechar também
+// Quando o usuário clicar fora do modal, fechá-lo também
 window.onclick = function(event) {
     if (event.target == modal) {
         closeModal();
