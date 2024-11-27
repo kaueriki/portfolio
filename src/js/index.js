@@ -89,3 +89,43 @@ ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
 ScrollReveal().reveal('.home-img img, .services-container, .portfolio-box', { origin: 'bottom' });
 ScrollReveal().reveal('.home-content h1, .about-img img', { origin: 'left' });
 ScrollReveal().reveal('.home-content h3, .home-content p, .about-content', { origin: 'right' });
+
+const modal = document.getElementById("modal");
+const modalContent = document.querySelector(".modal-content");
+const closeModalBtn = document.getElementById("closeModalBtn");
+const portfolioBoxes = document.querySelectorAll(".portfolio-box");
+
+// Quando qualquer box do portfólio for clicado, abrir o modal
+portfolioBoxes.forEach(box => {
+    box.addEventListener("click", function() {
+        // Pega os dados do projeto do item clicado
+        const title = box.getAttribute("data-title");
+        const description = box.getAttribute("data-description");
+
+        // Atualiza o conteúdo do modal
+        modalContent.innerHTML = `
+            <span id="closeModalBtn" class="close-btn">&times;</span>
+            <h2>${title}</h2>
+            <p>${description}</p>
+        `;
+        
+        // Exibe o modal
+        modal.style.display = "block";
+        
+        // Atualiza o listener do botão de fechar
+        const updatedCloseModalBtn = document.getElementById("closeModalBtn");
+        updatedCloseModalBtn.addEventListener('click', closeModal);
+    });
+});
+
+// Função para fechar o modal
+function closeModal() {
+    modal.style.display = "none";
+}
+
+// Quando o usuário clicar fora do modal, fechar também
+window.onclick = function(event) {
+    if (event.target == modal) {
+        closeModal();
+    }
+}
