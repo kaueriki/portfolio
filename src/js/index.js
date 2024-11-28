@@ -106,12 +106,25 @@ portfolioBoxes.forEach(box => {
         // Pega os dados do projeto do item clicado
         const title = box.getAttribute("data-title");
         const description = box.getAttribute("data-description");
+        const link = box.getAttribute("data-link");
+        const habilidades = box.getAttribute("data-habilidades");
+        const tecnologias = box.getAttribute("data-tecnologias");
 
         // Atualiza o conteúdo do modal com as informações do projeto
         modalContent.innerHTML = `
-            <span id="closeModalBtn" class="close-btn">&times;</span>
-            <h2>${title}</h2>
-            <p>${description}</p>
+                <span id="closeModalBtn" class="close-btn">&times;</span>
+                <h2>${title}</h2>
+                    
+                <div class="meio-modal">
+                    <p>${description}</p>
+                    <h3>- Habilidades desenvolvidas:</h3>
+                    <p>${habilidades}</p>
+                    <h3>- Tecnologias utilizadas:</h3>
+                    <p>${tecnologias}</p>
+                    <div class="botao">
+                        <a href="${link}" target="_blank">GitHub do projeto</a>
+                    </div>
+                </div>
         `;
         
         // Exibe o modal
