@@ -17,15 +17,14 @@
     --main-color: #ff0000;
     --white-color: #fdfdfd;
     --shadow-color: rgba(0, 0, 0, .7);
-    --TE-color: rgb(0,128,128);
+    /* --TE-color: rgb(0,128,128);
     --BCU-color: #00BFFF;
-    --BS-color: #9ACD32;
+    --BS-color: #9ACD32; */
     --SE-color: #ffb95e;
     --AL-color: #6495ED;
     --EC-color: #8A2BE2;
     --ESS-color: #1E90FF;
     --JP-color: #FFD700; 
-    --MDC-color: #F5DEB3;
 }
 
 .dark-mode {

@@ -54,75 +54,8 @@
 
 }
 
-@media (max-width: 1290px) {
-    html {
-        font-size: 55%;
-    }
-
-    .home .profession-container {
-        height: 85.8rem;
-    }
-
-    .home .profession-container .profession-box {
-        right: -12rem;
-        height: 85.8rem;
-    }
-
-    .home .profession-container .overlay {
-        right: -9rem;
-    }
-
-    .home-img img {
-        position: relative;
-        bottom: 270px;
-        /* bottom alterado de 0 para 5.5 */
-        right: 105px;
-        pointer-events: none;
-        max-width: 480px;
-        max-height: 90vh;
-        
-        /* alterado altura e largura */
-    }
 
 
-}
-
-@media (max-width: 1200px) {
-    html {
-        font-size: 55%;
-    }
-
-    .home .profession-container {
-        height: 85.8rem;
-    }
-
-    .home .profession-container .profession-box {
-        right: -12rem;
-        height: 85.8rem;
-    }
-
-    .home .profession-container .overlay {
-        right: -9rem;
-    }
-}
-
-@media (max-width: 1224px) {
-    .header {
-        padding: 2rem 3%;
-    }
-
-    section {
-        padding: 10rem 3% 2rem;
-    }
-
-    .home .profession-container .profession-box {
-        right: -22rem;
-    }
-
-    .home .profession-container .overlay {
-        right: -15rem;
-    }
-}
 
 @media (max-width: 991px) {
     .navbar a {
@@ -353,6 +286,19 @@
         margin-top: -200px;
     }
 
+    .projetos {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .projetos h2 {
+        text-align: center;
+    }
+
+    .projetos p {
+        text-align: left;
+    }
+
     .services h2,
     .portfolio h2 {
         margin-bottom: 3rem;
@@ -484,79 +430,7 @@
 
 }
 
-@media (max-width: 432px) {
-    html {
-        font-size: 50%;
-    }
 
-    #darkMode-icon {
-        right: 6rem;
-    }
-
-    .navbar {
-        padding: 1rem 10%;
-    }
-
-    .home {
-        padding: 65px 3% 30rem;
-    }
-
-    .home-content h3 {
-        font-size: 12px;
-        padding: 10px;
-    }
-
-    .home-content h1 {
-        font-size: 22px;
-    }
-
-    .home-content h2 {
-        text-align: center;
-        width: 100%;
-        font-size: 10px;
-    }
-
-    .home-content p {
-        font-size: 12px;
-    }
-
-    .home-content .social-media a {
-        width: 3rem;
-        height: 3rem;
-    }
-
-    .home .profession-box .profession:nth-child(1) {
-        transform: rotate(-90deg) translate(-50px, -280px);
-        padding: 20px;        
-    }
-
-    .home .profession-box .profession:nth-child(2) {
-        transform: rotate(0deg) translate(5px, -335px);
-        padding: 20px;
-    }
-
-    .home .profession-box .profession:nth-child(3) {
-        transform: rotate(90deg) translate(-85px, -415px);
-    }
-
-    .home .profession-box .profession:nth-child(4) {
-        transform: rotate(180deg) translate(-155px, -335px);
-        padding: 20px;
-    }
-
-    .home .profession-container .overlay {
-        position: fixed;
-        top: 649px;
-        left: 50%;
-        right: 0;
-        transform: rotate(90deg) translate(-50%, 50%) scaleY(3);
-        border-width: 23.9rem;
-    }
-
-    .contat form .input-box input {
-        width: 100%;
-    }
-}
 
 @media (max-width: 392px) {
     html {
