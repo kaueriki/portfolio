@@ -306,15 +306,6 @@ section {
     color: var(--main-color);
 } */
 
-::-webkit-scrollbar {
-    width: 15px;
- }
-
-::-webkit-scrollbar-thumb {
-    background-color: var(--main-color);
-    border: 2px solid var(--bg-color);
- }
-
 
 
 .about {
@@ -563,6 +554,7 @@ section {
     width: 40%;
     font-size: 12px;
     border-radius: 30px;
+    overflow-y: auto;
 }
 
 .close-btn {

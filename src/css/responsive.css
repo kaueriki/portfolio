@@ -185,6 +185,22 @@
     .footer {
         padding: 2rem 3%;
     }
+    .modal-content {
+        width: 90%;
+        height: auto; /* Deixa a altura ajustável */
+        margin: 5% auto; /* Margem superior reduzida */
+        padding: 15px;
+        font-size: 14px; /* Texto ligeiramente maior para melhor leitura */
+        border-radius: 20px;
+    }
+
+    .meio-modal .botao a {
+        width: 100%; /* Botão ocupa toda a largura */
+        text-align: center; /* Texto centralizado */
+        height: auto;
+        padding: 10px; /* Aumenta o espaço interno */
+        font-size: 14px; /* Texto maior */
+    }
 }
 
 @media (max-width: 768px) {
@@ -364,7 +380,11 @@
         font-size: 14px;
         top: 20px;
     } 
-    
+    .modal-content {
+        width: 95%;
+        padding: 10px;
+        font-size: 12px;
+    }
     
 }
 
@@ -445,6 +465,21 @@
     .profession-box img {
         height: 100%;
         width: 100%;
+    }
+    .modal-content {
+        width: 100%;
+        height: auto;
+        margin: 5% auto;
+        font-size: 12px;
+    }
+
+    .close-btn {
+        font-size: 18px; /* Ajusta o tamanho do botão de fechar */
+    }
+
+    .meio-modal .botao a {
+        font-size: 12px;
+        padding: 8px;
     }
 
 }
@@ -589,6 +624,9 @@
 }
 
 @media (max-width: 391px) {
+    .header {
+        width: 375px;
+    }
     .about-img img {
         width: 60vw;
     }
@@ -602,6 +640,12 @@
         border-width: 23.9rem;
     }
 
+    .about-img img {
+        width: 60%;
+        height: 50%;
+        margin-top: -120px;
+    }
+
     .footer {
         flex-direction: column-reverse;
     }
@@ -609,5 +653,14 @@
     .footer p {
         text-align: center;
         margin-top: 2rem;
+    }
+    .modal {
+        width: 350px;
+        margin-left: 18px;
+        margin-top: 50px;
+    }
+    .modal-content {
+        height: 70%;
+        font-size: 14px;
     }
 }
