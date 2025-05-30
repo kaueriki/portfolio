@@ -298,7 +298,13 @@
     .projetos p {
         text-align: left;
     }
+    .conteudo-projeto {
+        flex-direction: column;
+    }
 
+    .conteudo-profissao {
+        flex-direction: column;
+    }
     .services h2,
     .portfolio h2 {
         margin-bottom: 3rem;
@@ -366,6 +372,9 @@
         transform: rotate(90deg) translate(-50%, 50%) scaleY(3);
         border-width: 23.9rem;
     }
+    .conteudo-projeto {
+        flex-direction: column;
+    }
     
     .portfolio .portfolio-container {
         grid-template-columns: 1fr;
@@ -390,6 +399,7 @@
         
     }
 
+
     .home .profession-box .profession:nth-child(4) {
         transform: rotate(180deg) translate(-165px, -335px);
         padding: 20px;
@@ -408,6 +418,9 @@
         grid-template-columns: 1fr;
     }
 
+    .conteudo-projeto {
+        flex-direction: column;
+    }
     .profession-box img {
         height: 100%;
         width: 100%;
@@ -420,7 +433,7 @@
     }
 
     .close-btn {
-        font-size: 18px; /* Ajusta o tamanho do botão de fechar */
+        font-size: 18px; 
     }
 
     .meio-modal .botao a {
