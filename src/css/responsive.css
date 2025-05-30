@@ -300,10 +300,12 @@
     }
     .conteudo-projeto {
         flex-direction: column;
+        align-items: center;
     }
 
     .conteudo-profissao {
         flex-direction: column;
+        align-items: center;
     }
     .services h2,
     .portfolio h2 {
