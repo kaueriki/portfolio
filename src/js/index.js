@@ -1,4 +1,3 @@
-// MENU ICON NAVBAR
 const menuIcon = document.querySelector('#menu-icon');
 const navbar = document.querySelector('.navbar');
 
@@ -7,7 +6,6 @@ menuIcon.addEventListener('click', () => {
     navbar.classList.toggle('active');
 });
 
-// SCROLL SECTIONS ACTIVE LINK
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('header nav a');
 
@@ -27,16 +25,13 @@ window.addEventListener('scroll', () => {
         }
     });
 
-    // STICKY NAVBAR    
     const header = document.querySelector('.header');
     header.classList.toggle('sticky', scrollPosition > 100);
 
-    // REMOVE MENU ICON NAVBAR WHEN CLICK NAVBAR LINK (SCROLL)
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
 });
 
-// DARK LIGHT MODE
 const darkModeIcon = document.querySelector('#darkMode-icon');
 const logo = document.getElementById('logo');
 const logote = document.getElementById('logote');
@@ -47,28 +42,27 @@ darkModeIcon.addEventListener('click', () => {
     darkModeIcon.classList.toggle('bx-sun', !isSun);
     document.body.classList.toggle('dark-mode');
     updateLogo(isSun);
-    updateLogote(isSun);
+    updateLogoTE(isSun);
 });
 
-// Função para atualizar a logo
 function updateLogo(isSun) {
     if (isSun) {
-        logo.style.backgroundImage = "url('../src/image/logo.png')"; // Modo Claro
+        logo.style.backgroundImage = "url('../src/image/logo.png')"; 
     } else {
-        logo.style.backgroundImage = "url('../src/image/logo_modoescuro.png')"; // Modo Escuro
+        logo.style.backgroundImage = "url('../src/image/logo_modoescuro.png')"; 
     }
 }
 
-// function updateLogote(isSun) {
-//     if (isSun) {
-//         logote.style.backgroundImage = "url('../src/image/logotechempiremodoclaro.png')"; // Modo Claro
-//     } else {
-//         logote.style.backgroundImage = "url('../src/image/logotechempire.png')"; // Modo Escuro
-//     }
-// }
+function updateLogoTE(isSun) {
+    const logote = document.getElementById('logote');
+    if (logote) {
+        logote.src = isSun 
+            ? '../src/image/logotechempiremodoclaro.png' 
+            : '../src/image/logotechempire.png'; 
+    }
+}
 
 
-// SCROLL REVEAL
 ScrollReveal({ 
     reset: true,
     distance: '80px',
@@ -86,22 +80,14 @@ const modalContent = document.querySelector(".modal-content");
 const closeModalBtn = document.getElementById("closeModalBtn");
 const portfolioBoxes = document.querySelectorAll(".portfolio-box");
 
-// Garantir que o modal esteja inicialmente fechado
-window.onload = function() {
-    modal.style.display = "none"; // O modal começa fechado quando a página é carregada
-};
-
-// Quando qualquer box do portfólio for clicado, abrir o modal
 portfolioBoxes.forEach(box => {
     box.addEventListener("click", function() {
-        // Pega os dados do projeto do item clicado
         const title = box.getAttribute("data-title");
         const description = box.getAttribute("data-description");
         const link = box.getAttribute("data-link");
         const habilidades = box.getAttribute("data-habilidades");
         const tecnologias = box.getAttribute("data-tecnologias");
 
-        // Atualiza o conteúdo do modal com as informações do projeto
         modalContent.innerHTML = `
                 <span id="closeModalBtn" class="close-btn">&times;</span>
                 <h2>${title}</h2>
@@ -118,21 +104,17 @@ portfolioBoxes.forEach(box => {
                 </div>
         `;
         
-        // Exibe o modal
         modal.style.display = "block";
         
-        // Atualiza o listener do botão de fechar
         const updatedCloseModalBtn = document.getElementById("closeModalBtn");
         updatedCloseModalBtn.addEventListener('click', closeModal);
     });
 });
 
-// Função para fechar o modal
 function closeModal() {
     modal.style.display = "none";
 }
 
-// Quando o usuário clicar fora do modal, fechá-lo também
 window.onclick = function(event) {
     if (event.target == modal) {
         closeModal();

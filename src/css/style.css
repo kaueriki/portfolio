@@ -231,8 +231,6 @@ section {
     transform-origin: 384px;
     background: var(--bg-color);
     padding: 13px 0px;
-    /* padding-left: 55px; */
-    /* background-color: red; */
 }
 
 .home .profession-box .profession:nth-child(1),
@@ -298,13 +296,7 @@ section {
     pointer-events: none;
     max-width: 480px;
     max-height: 90vh;
-    
-    /* alterado altura e largura */
 }
-
-/* span {
-    color: var(--main-color);
-} */
 
 
 
@@ -323,25 +315,26 @@ section {
 .projetos {
     gap: 50px;
     flex-direction: column;
+    
 }
 
 .projetos-container {
+    margin-top: 50px;
     display: flex; 
     flex-direction: column; 
     gap: 50px;
 }
 
 .conteudo-projeto {
-    display: flex; /* Configura o Flexbox para alinhar itens lado a lado */
-    flex-direction: row; /* Itens em linha horizontal */
-    align-items: flex-start; /* Alinha os itens no topo */
-    gap: 20px; /* Espaçamento entre a imagem e os textos */
-    
+    display: flex;
+    flex-direction: row; 
+    align-items: flex-start; 
+    gap: 20px; 
 }
 
 .projetos-container img {
     width: 50%; 
-    max-width: 450px;
+    max-width: 300px;
     height: auto; 
     border-radius: 30px;
     background-color: rgba(255, 255, 255, 0.158);
@@ -414,7 +407,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
     width: 90vw;
     flex-wrap: wrap;
 }
@@ -427,7 +420,6 @@ section {
     transition: .5s ease;
     height: 200px;
 }
-
 
 .services-box i {
     font-size: 1200%;
@@ -448,6 +440,62 @@ section {
     color: var(--main-color);
 }
 
+.profissao {
+    gap: 50px;
+    flex-direction: column;
+}
+
+.profissao-container {
+    display: flex; 
+    flex-direction: column; 
+    gap: 50px;
+}
+
+.conteudo-profissao {
+    display: flex; /* Configura o Flexbox para alinhar itens lado a lado */
+    flex-direction: row; /* Itens em linha horizontal */
+    align-items: flex-start; /* Alinha os itens no topo */
+    gap: 20px; /* Espaçamento entre a imagem e os textos */
+    
+}
+
+.profissao-container img {
+    width: 25%; 
+    max-width: 450px;
+    height: auto; 
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.158);
+}
+
+.profissao-container h3 {
+    text-align: center; 
+    margin-bottom: 10px;
+    font-size: 35px;
+}
+.conteudo-profissao h4 {
+    text-align: left; 
+    font-size: 20px; 
+    margin: 0; 
+}
+.textos-profissao a {
+    margin-top: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    height: 30px;
+    background: white;
+    color: black;
+    border-radius: 2.5rem;
+    font-size: 13px;
+    transition: .5s ease;
+} 
+
+.textos-profissao a:hover {
+    background: var(--main-color);
+    color: var(--white-color);
+    border: 1px solid var(--white-color);   
+}
 
 
 .portfolio {
@@ -593,12 +641,12 @@ section {
 }
 
 .modal {
-    display: flex;
+    display: none;
     position: fixed;
     z-index: 1000;
     left: 0;
     top: 0;
-    width: 100%;
+    width: 90%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     color: #000000;
@@ -606,7 +654,7 @@ section {
 
 .modal-content {
     background-color: rgba(255, 255, 255, 0.705);
-    margin: 8% auto;
+    margin: 5% auto;
     padding: 20px;
     border: 2px solid white;
     height: 75%;
@@ -628,15 +676,16 @@ section {
 
 .close-btn:hover,
 .close-btn:focus {
-    color: var(--main-color); /* Contraste alto no hover */
-    outline: none; /* Remove borda padrão do foco */
+    color: var(--main-color); 
+    outline: none; 
 }
 
 .meio-modal {
     gap: 20px;
 }
 .meio-modal .botao{
-    margin-left:390px;
+    margin-top: 10px;
+    margin-left: 40%;
 }
 
 .meio-modal .botao a {
