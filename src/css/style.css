@@ -1,6 +1,17 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
     background: var(--bg-color);
     color: var(--text-color);
+}
+
+main {
+    flex: 1;
 }
 
 .header {
@@ -337,7 +348,7 @@ section {
     max-width: 300px;
     height: auto; 
     border-radius: 30px;
-    background-color: rgba(255, 255, 255, 0.158);
+    background-color: rgb(85, 85, 85); 
 }
 
 
@@ -610,35 +621,41 @@ section {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding: 20px 7%;
+    padding: 2rem 7%;
     background: var(--main-color);
+    color: var(--white-color);
+    font-size: 1.4rem;
+    position: flex;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 
 .footer-text p {
-    font: 16px;
-    color: var(--white-color);
+    margin: 0;
 }
 
 .footer-iconTop a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    padding: 8px;
+    padding: 10px;
     background: var(--white-color);
-    border-radius: 8px;
-    border: 2px solid var(--main-color);
-    outline: 2px solid transparent;
-    transition: .5s ease;
+    color: var(--main-color);
+    border-radius: 50%;
+    transition: 0.3s ease;
 }
 
 .footer-iconTop a:hover {
-    outline-color: var(--white-color);
+    background: transparent;
+    border: 2px solid var(--white-color);
+    color: var(--white-color);
 }
 
 .footer-iconTop a i {
-    font-size: 24px;
-    color: #333;
+    font-size: 20px;
 }
+
 
 .modal {
     display: none;

@@ -20,21 +20,25 @@ window.addEventListener('scroll', () => {
         if (scrollPosition >= offset && scrollPosition < offset + height) {
             navLinks.forEach((link) => {
                 link.classList.remove('active');
-                document.querySelector(`header nav a[href*=${id}]`).classList.add('active');
             });
+            const activeLink = document.querySelector(`header nav a[href*=${id}]`);
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
         }
     });
 
     const header = document.querySelector('.header');
     header.classList.toggle('sticky', scrollPosition > 100);
 
-    menuIcon.classList.remove('bx-x');
-    navbar.classList.remove('active');
+    if (menuIcon.classList.contains('bx-x')) {
+        menuIcon.classList.remove('bx-x');
+        navbar.classList.remove('active');
+    }
 });
 
 const darkModeIcon = document.querySelector('#darkMode-icon');
 const logo = document.getElementById('logo');
-const logote = document.getElementById('logote');
 
 darkModeIcon.addEventListener('click', () => {
     const isSun = darkModeIcon.classList.contains('bx-sun');
@@ -62,7 +66,6 @@ function updateLogoTE(isSun) {
     }
 }
 
-
 ScrollReveal({ 
     reset: true,
     distance: '80px',
@@ -77,7 +80,6 @@ ScrollReveal().reveal('.home-content h3, .home-content p, .about-content', { ori
 
 const modal = document.getElementById("modal");
 const modalContent = document.querySelector(".modal-content");
-const closeModalBtn = document.getElementById("closeModalBtn");
 const portfolioBoxes = document.querySelectorAll(".portfolio-box");
 
 portfolioBoxes.forEach(box => {
@@ -89,25 +91,24 @@ portfolioBoxes.forEach(box => {
         const tecnologias = box.getAttribute("data-tecnologias");
 
         modalContent.innerHTML = `
-                <span id="closeModalBtn" class="close-btn">&times;</span>
-                <h2>${title}</h2>
-                    
-                <div class="meio-modal">
-                    <p>${description}</p>
-                    <h3>- Habilidades desenvolvidas:</h3>
-                    <p>${habilidades}</p>
-                    <h3>- Tecnologias utilizadas:</h3>
-                    <p>${tecnologias}</p>
-                    <div class="botao">
-                        <a href="${link}" target="_blank">GitHub do projeto</a>
-                    </div>
+            <span class="close-btn">&times;</span>
+            <h2>${title}</h2>
+            <div class="meio-modal">
+                <p>${description}</p>
+                <h3>- Habilidades desenvolvidas:</h3>
+                <p>${habilidades}</p>
+                <h3>- Tecnologias utilizadas:</h3>
+                <p>${tecnologias}</p>
+                <div class="botao">
+                    <a href="${link}" target="_blank">GitHub do projeto</a>
                 </div>
+            </div>
         `;
-        
+
         modal.style.display = "block";
-        
-        const updatedCloseModalBtn = document.getElementById("closeModalBtn");
-        updatedCloseModalBtn.addEventListener('click', closeModal);
+
+        const closeBtn = modalContent.querySelector('.close-btn');
+        closeBtn.addEventListener('click', closeModal);
     });
 });
 
@@ -119,4 +120,4 @@ window.onclick = function(event) {
     if (event.target == modal) {
         closeModal();
     }
-}
+};
