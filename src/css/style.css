@@ -147,6 +147,20 @@ section {
     animation-delay: calc(.06s * var(--i));
 }
 
+.carousel {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 10px;
+}
+
+.carousel img {
+    max-height: 250px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.4);
+}
+
+
 @keyframes slideLeft {
     0% {
         opacity: 0;
@@ -348,7 +362,7 @@ section {
     max-width: 300px;
     height: auto; 
     border-radius: 30px;
-    background-color: rgb(85, 85, 85); 
+    background-color: rgba(255, 255, 255, 0.158);
 }
 
 
@@ -463,11 +477,10 @@ section {
 }
 
 .conteudo-profissao {
-    display: flex; /* Configura o Flexbox para alinhar itens lado a lado */
-    flex-direction: row; /* Itens em linha horizontal */
-    align-items: flex-start; /* Alinha os itens no topo */
-    gap: 20px; /* Espaçamento entre a imagem e os textos */
-    
+    display: flex; 
+    flex-direction: row; 
+    align-items: flex-start; 
+    gap: 20px;
 }
 
 .profissao-container img {
@@ -673,7 +686,7 @@ section {
     background-color: rgba(255, 255, 255, 0.705);
     margin: 5% auto;
     padding: 20px;
-    border: 2px solid white;
+    border: 2px solid rgb(96, 96, 96);
     height: 75%;
     width: 40%;
     font-size: 12px;
