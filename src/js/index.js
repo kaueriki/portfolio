@@ -1,11 +1,3 @@
-const menuIcon = document.querySelector('#menu-icon');
-const navbar = document.querySelector('.navbar');
-
-menuIcon.addEventListener('click', () => {
-    menuIcon.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
-});
-
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('header nav a');
 
@@ -27,14 +19,6 @@ window.addEventListener('scroll', () => {
             }
         }
     });
-
-    const header = document.querySelector('.header');
-    header.classList.toggle('sticky', scrollPosition > 100);
-
-    if (menuIcon.classList.contains('bx-x')) {
-        menuIcon.classList.remove('bx-x');
-        navbar.classList.remove('active');
-    }
 });
 
 const darkModeIcon = document.querySelector('#darkMode-icon');

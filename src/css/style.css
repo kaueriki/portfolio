@@ -17,13 +17,10 @@ main {
 .header {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
-    padding: 2rem 4%;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    z-index: 100;
-    transition: .5s;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 .header.sticky {
@@ -31,6 +28,14 @@ main {
     box-shadow: 0 .1rem .1rem var(--shadow-color);
     
 }
+body.dark-mode .header {
+    background-color: #121212;
+}
+
+body:not(.dark-mode) .header {
+    background-color: #121212;
+}
+
 
 .logo {
     font-size: 2.5rem;
@@ -45,16 +50,8 @@ main {
     position: relative;
     font-size: 1.7rem;
     color: var(--white-color);
-    font-weight: 500;
+    font-weight: 600;
     margin-right: 3.5rem;
-}
-
-.header.sticky .navbar a {
-    color: var(--text-color);
-}
-
-.header.sticky .navbar a.active {
-    color: var(--main-color);
 }
 
 .navbar a.active::before {
@@ -67,10 +64,6 @@ main {
     background: var(--white-color);
 }
 
-.header.sticky .navbar a::before {
-    background: var(--main-color);
-    opacity: .7;
-}
 
 #darkMode-icon {
     font-size: 2.4rem;
@@ -92,7 +85,6 @@ main {
 section {
     min-height: 100vh;
     padding: 10rem 4% 2rem;
-    /* padding 7% alterado para 4% */
 }
 
 .home {
@@ -125,7 +117,7 @@ section {
 }
 
 .home-content p {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     font-weight: 400;
 }
 
@@ -416,8 +408,11 @@ section {
     font-size: 20px;
 }
 
+p {
+    font-size: 15px;
+}
 .about-content p {
-    font-size: 12px;
+    font-size: 20px;
     margin: 20px 0 30px;
     line-height: 30px;
 }
@@ -589,7 +584,7 @@ section {
 }
 
 .portfolio-layer p {
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .portfolio-layer a {
